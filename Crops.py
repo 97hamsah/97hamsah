@@ -9,6 +9,15 @@ class Crop:
         self._status = "Seed"
         self._type = "Generic"
 
+        def needs(self):
+            return {'light_need':self._light_need, 'water_need':self._water_need}
+        def report(self):
+            return {'type':self._type, 'status':self._status, 'growth':self._growth}
+
+        def set_growt(self,value):
+            self._growth = value
+        def get_growth(self):
+            return(self.growth)
 def main():
     new_crop = Crop(1,4,3)
     print(new_crop._status)
@@ -18,6 +27,10 @@ def main():
     print(new_crop2._status)
     print(new_crop2._light_need)
     print(new_crop2._water_need)
+    help(Crop)
+    help(math)
+    print(math)
+    new_crop.set_growt(5)
 
 if __name__ == "__main__":
     main()
