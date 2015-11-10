@@ -21,16 +21,14 @@ class Exam1(QMainWindow):
     def initUI(self):
         """This method is called when the application first runs
             The method initializes all the gui """
-        pass
+        self.frame = QWidget(self)
+        self.setCentralWidget(self.frame)
         
     def run(self):
         self.show()
         sys.exit(app.exec_())
 
-
-        
-        
-        
+MyProgram().run()
 app = QApplication(sys.argv)
 
 # Start the program by calling the run method. 
