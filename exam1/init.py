@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Nov  3 08:55:02 2015
+
+@author: 97hamsah
+"""
+import sys
+from PyQt4.QtCore import * 
+from PyQt4.QtGui import * 
+import model
+
+class Exam1(QMainWindow):
+    
+    def __init__(self, parent=None):
+        super(Exam1, self).__init__()
+        
+        self.setWindowTitle("Exam1 template")
+        
+        self.initUI()
+    
+    def initUI(self):
+        """This method is called when the application first runs
+            The method initializes all the gui """
+        self.frame = QWidget(self)
+        self.setCentralWidget(self.frame)
+        
+    def run(self):
+        self.show()
+        sys.exit(app.exec_())
+
+MyProgram().run()
+app = QApplication(sys.argv)
+
+# Start the program by calling the run method. 
+# When the run method is called the Exam1.__init__ is run too
+Exam1().run()
